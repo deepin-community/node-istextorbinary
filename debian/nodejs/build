@@ -1,0 +1,15 @@
+tsc --module commonjs --target ES2019 --outDir ./edition-es2019 --project tsconfig.json
+if test -d edition-es2019/source; then
+	mv edition-es2019/source edition-temp
+	rm -Rf edition-es2019
+	mv edition-temp edition-es2019
+fi
+echo '{"type":"commonjs"}' > edition-es2019/package.json
+
+tsc --module ESNext --target ES2019 --outDir ./edition-es2019-esm --project tsconfig.json
+if test -d edition-es2019-esm/source; then
+	mv edition-es2019-esm/source edition-temp
+	rm -Rf edition-es2019-esm
+	mv edition-temp edition-es2019-esm
+fi
+echo '{"type": "module"}' > edition-es2019-esm/package.json

@@ -1,5 +1,20 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-istextorbinary (6.0.0+~cs9.33.0-3) unstable; urgency=medium
 
-  * Initial release
+  * Build ES module edition
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Pirate Praveen <praveen@debian.org>  Sun, 15 May 2022 16:36:06 +0530
+
+node-istextorbinary (6.0.0+~cs9.33.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Make build files readable and fix bad package.json files
+  * Fix copyright
+  * Drop bad clean hook and fix tsconfig files
+
+ -- Yadd <yadd@debian.org>  Fri, 06 May 2022 09:23:00 +0200
+
+node-istextorbinary (6.0.0+~cs9.33.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1010625)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 05 May 2022 22:52:35 +0530

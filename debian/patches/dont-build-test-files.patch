@@ -1,0 +1,32 @@
+Description: don't build test files due to internal circular dependencies
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-05-06
+
+--- a/binaryextensions/tsconfig.json
++++ b/binaryextensions/tsconfig.json
+@@ -9,5 +9,6 @@
+     "target": "ES5",
+     "module": "ESNext"
+   },
++  "exclude": ["source/test*"],
+   "include": ["source"]
+ }
+--- a/textextensions/tsconfig.json
++++ b/textextensions/tsconfig.json
+@@ -9,5 +9,6 @@
+     "target": "ES5",
+     "module": "ESNext"
+   },
++  "exclude": ["source/test*"],
+   "include": ["source"]
+ }
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -9,5 +9,6 @@
+     "target": "ES2019",
+     "module": "ESNext"
+   },
++  "exclude": ["source/test*"],
+   "include": ["source"]
+ }
