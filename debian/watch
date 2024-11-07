@@ -1,0 +1,17 @@
+version=4
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/istextorbinary-$1\.tar\.gz/ \
+  https://github.com/bevry/istextorbinary/tags .*/v?(\d\S+)\.tar\.gz group
+
+opts=\
+component=textextensions,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-textextensions-$1/ \
+ https://github.com/bevry/textextensions/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+component=binaryextensions,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-binaryextensions-$1/ \
+ https://github.com/bevry/binaryextensions/tags .*/archive.*/v?([\d\.]+).tar.gz checksum

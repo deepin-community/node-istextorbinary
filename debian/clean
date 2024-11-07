@@ -1,0 +1,6 @@
+# Build files
+binaryextensions/edition-es5-esm/
+binaryextensions/edition-es5/
+edition-es2019/
+textextensions/edition-es5-esm/
+textextensions/edition-es5/

@@ -1,0 +1,17 @@
+#ESM
+tsc --module ESNext --target ES5 --outDir ./edition-es5-esm --project tsconfig.json
+if test -d edition-es5-esm/source; then
+	mv edition-es5-esm/source edition-temp
+	rm -Rf edition-es5-esm
+	mv edition-temp edition-es5-esm
+fi
+echo '{"type":"module"}' > edition-es5-esm/package.json
+
+#CJS
+tsc --module commonjs --target ES5 --outDir ./edition-es5 --project tsconfig.json
+if test -d edition-es5/source; then
+	mv edition-es5/source edition-temp
+	rm -Rf edition-es5
+	mv edition-temp edition-es5
+fi
+echo '{"type":"commonjs"}' > edition-es5/package.json
